@@ -15,7 +15,7 @@ var _roleR = require('./routes/roleR'); var _roleR2 = _interopRequireDefault(_ro
 var _QanswersR = require('./routes/QanswersR'); var _QanswersR2 = _interopRequireDefault(_QanswersR);
 
 const whiteList = [
-  'http://54.232.12.74',
+  'http://192.168.1.9',
   'http://localhost:3000',
 ];
 
