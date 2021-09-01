@@ -15,7 +15,7 @@ import roleRoutes from './routes/roleR';
 import QanswersRoutes from './routes/QanswersR';
 
 const whiteList = [
-  'http://54.232.12.74',
+  'http://192.168.1.9',
   'http://localhost:3000',
 ];
 
