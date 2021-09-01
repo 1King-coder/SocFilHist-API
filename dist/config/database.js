@@ -2,11 +2,11 @@
 
 module.exports = {
   dialect: 'mariadb',
-  host: '192.168.1.9',
-  port: 3306,
-  username: 'root',
-  password: '1b2ca675412f420611d3',
-  database: 'socfilhist-project',
+  host: process.env.DATABASE_HOST,
+  port: process.env.DATABASE_PORT,
+  username: process.env.DATABASE_USERNAME,
+  password: process.env.DATABASE_PASSWORD,
+  database: process.env.DATABASE,
   define: {
     timestamps: true,
     underscored: true,
