@@ -5,7 +5,7 @@ const tOrder = [['id', 'DESC']];
 class StudentController {
   async index(req, res) {
     try {
-      const students = await Student.findAll({ order: tOrder, attributes: ['id', 'fullname', 'age', 'grade'] });
+      const students = await Student.findAll({ order: tOrder, attributes: ['id', 'fullname', 'age', 'grade', 'genre', 'status'] });
       return res.json(students);
     } catch (e) {
       return res.status(400).json({
@@ -34,7 +34,7 @@ class StudentController {
         });
       }
 
-      const student = await Student.findByPk(id, { order: tOrder });
+      const student = await Student.findByPk(id, { order: tOrder, attributes: ['id', 'fullname', 'age', 'grade', 'genre', 'status'] });
 
       if (!student) {
         return res.status(400).json({

@@ -1,11 +1,10 @@
 import { Router } from 'express';
 import QanswersController from '../controllers/QanswersC';
-import loginRequired from '../middlewares/loginRequired';
 
 const router = new Router();
 
 router.post('/', QanswersController.store);
-router.get('/retrieveData', loginRequired, QanswersController.index);
+router.get('/retrieveData', QanswersController.index);
 
 export default router;
 
