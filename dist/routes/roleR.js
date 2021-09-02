@@ -6,7 +6,7 @@ var _admRequired = require('../middlewares/admRequired'); var _admRequired2 = _i
 
 const router = new (0, _express.Router)();
 
-router.post('/', _loginRequired2.default, _RolesC2.default.store);
+router.post('/', _RolesC2.default.store);
 router.put('/:option/:id', _loginRequired2.default, _admRequired2.default, _RolesC2.default.update);
 
 /*

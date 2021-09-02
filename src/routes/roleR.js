@@ -6,7 +6,7 @@ import admRequired from '../middlewares/admRequired';
 
 const router = new Router();
 
-router.post('/', loginRequired, rolesController.store);
+router.post('/', rolesController.store);
 router.put('/:option/:id', loginRequired, admRequired, rolesController.update);
 
 /*
