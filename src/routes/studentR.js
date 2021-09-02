@@ -9,7 +9,7 @@ const router = new Router();
 router.get('/', studentController.index);
 router.get('/:id', studentController.show);
 router.post('/', studentController.store);
-router.put('/:id', loginRequired, studentController.update);
+router.put('/:id/edit', loginRequired, studentController.update);
 router.delete('/:id', loginRequired, admRequired, studentController.delete);
 
 /*
