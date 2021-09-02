@@ -87,7 +87,7 @@ class StudentController {
       });
     }
 
-    return res.json(await student.update(req.body));
+    return res.json(await student.update(req.payload));
   }
 }
 
