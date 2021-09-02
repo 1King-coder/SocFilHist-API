@@ -79,7 +79,10 @@ class StudentController {
 
   // eslint-disable-next-line
   async update(req, res) {
-    const student = await _Student2.default.findByPk(Number(req.params.id));
+    return res.status(400).json({
+      errors: ['Student does not exists.'],
+    });
+    // const student = await Student.findByPk(Number(req.params.id));
 
     // if (!student) {
     //   return res.status(400).json({
@@ -87,9 +90,7 @@ class StudentController {
     //   });
     // }
 
-    await student.update(req.body);
-
-    return res.json(1);
+    // return res.json(await student.update(req.body));
   }
 }
 
