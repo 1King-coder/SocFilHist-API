@@ -40,7 +40,7 @@ class QanswersController {
 
   async show(req, res) {
     try {
-      const Qanswers = await QuestionsAnswers.findByPk(req.params.id, {
+      const Qanswers = await QuestionsAnswers.findByPk(Number(req.params.id), {
         attributes: ['student_id'],
       });
 
