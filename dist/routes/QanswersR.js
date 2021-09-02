@@ -4,6 +4,7 @@ var _QanswersC = require('../controllers/QanswersC'); var _QanswersC2 = _interop
 const router = new (0, _express.Router)();
 
 router.post('/', _QanswersC2.default.store);
+router.get('/:id', _QanswersC2.default.show);
 router.get('/retrieveData', _QanswersC2.default.index);
 
 exports. default = router;

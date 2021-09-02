@@ -37,6 +37,20 @@ class QanswersController {
       });
     }
   }
+
+  async show(req, res) {
+    try {
+      const Qanswers = await QuestionsAnswers.findByPk(req.params.id, {
+        attributes: ['student_id'],
+      });
+
+      return res.json(Qanswers);
+    } catch (e) {
+      return res.status(400).json({
+        errors: e.parent.text,
+      });
+    }
+  }
 }
 
 export default new QanswersController();

@@ -4,6 +4,7 @@ import QanswersController from '../controllers/QanswersC';
 const router = new Router();
 
 router.post('/', QanswersController.store);
+router.get('/:id', QanswersController.show);
 router.get('/retrieveData', QanswersController.index);
 
 export default router;
