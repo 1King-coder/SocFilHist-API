@@ -32,6 +32,26 @@ export default class Student extends Model {
           },
         },
       },
+      status: {
+        type: Sequelize.STRING,
+        defaultValue: '',
+        validate: {
+          len: {
+            args: [2, 255],
+            msg: 'Você deve inserir seu status.',
+          },
+        },
+      },
+      genre: {
+        type: Sequelize.STRING,
+        defaultValue: '',
+        validate: {
+          len: {
+            args: [2, 255],
+            msg: 'Você deve inserir seu gênero.',
+          },
+        },
+      },
     }, { sequelize });
     return this;
   }

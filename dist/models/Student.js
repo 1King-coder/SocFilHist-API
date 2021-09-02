@@ -32,6 +32,26 @@
           },
         },
       },
+      status: {
+        type: _sequelize2.default.STRING,
+        defaultValue: '',
+        validate: {
+          len: {
+            args: [2, 255],
+            msg: 'Você deve inserir seu status.',
+          },
+        },
+      },
+      genre: {
+        type: _sequelize2.default.STRING,
+        defaultValue: '',
+        validate: {
+          len: {
+            args: [2, 255],
+            msg: 'Você deve inserir seu gênero.',
+          },
+        },
+      },
     }, { sequelize });
     return this;
   }
