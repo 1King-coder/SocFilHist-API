@@ -81,11 +81,11 @@ class StudentController {
   async update(req, res) {
     const student = await _Student2.default.findByPk(Number(req.params.id));
 
-    if (!student) {
-      return res.status(400).json({
-        errors: ['Student does not exists.'],
-      });
-    }
+    // if (!student) {
+    //   return res.status(400).json({
+    //     errors: ['Student does not exists.'],
+    //   });
+    // }
 
     await student.update(req.body);
 
