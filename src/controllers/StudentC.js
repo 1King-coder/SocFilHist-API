@@ -76,33 +76,6 @@ class StudentController {
       });
     }
   }
-
-  // eslint-disable-next-line
-  async update(req, res) {
-    try {
-      const { id } = req.params;
-
-      if (!id) {
-        return res.status(400).json({
-          errors: ['Missing ID.'],
-        });
-      }
-
-      const student = await Student.findByPk(Number(id));
-
-      if (!student) {
-        return res.status(400).json({
-          errors: ['Student does not exists.'],
-        });
-      }
-
-      return res.json(await student.update(req.body));
-    } catch (e) {
-      return res.status(400).json({
-        errors: e.parent.text,
-      });
-    }
-  }
 }
 
 export default new StudentController();
