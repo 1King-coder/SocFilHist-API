@@ -6,7 +6,7 @@ import admRequired from '../middlewares/admRequired';
 
 const router = new Router();
 
-router.get('/', studentController.index);
+router.get('/', loginRequired, studentController.index);
 router.get('/:id', studentController.show);
 router.post('/', studentController.store);
 router.delete('/:id', loginRequired, admRequired, studentController.delete);
