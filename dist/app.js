@@ -16,6 +16,7 @@ var _QanswersR = require('./routes/QanswersR'); var _QanswersR2 = _interopRequir
 
 const whiteList = [
   'http://192.168.1.9',
+  'http://192.168.1.9:81',
   'http://localhost:3000',
 ];
 
