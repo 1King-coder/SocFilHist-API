@@ -16,6 +16,7 @@ import QanswersRoutes from './routes/QanswersR';
 
 const whiteList = [
   'http://192.168.1.9',
+  'http://192.168.1.9:81',
   'http://localhost:3000',
 ];
 
